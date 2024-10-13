@@ -1,0 +1,163 @@
+/* Navbar Container */
+.navbar_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 1.2rem 2rem;
+  background-color: #fffdfd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;
+  z-index: 1000;
+  height: 120px;;
+}
+
+.navbar_logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.navbar_links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar_logo2 {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.navbar_links p {
+  margin: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar_links p:hover {
+  color: #007bff;
+}
+
+.navbar_contact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar_contact2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #d7dde4;
+  border-radius: 10px;
+  padding-left: 10%;
+}
+
+.navbar_callIcon {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.navbar_contactInfo p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: #555;
+}
+
+/* Hamburger Menu */
+.navbar_hamburger {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.navbar_ham_label {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  cursor: pointer;
+}
+
+.navbar_ham_label span {
+  background: #cec9c9;
+  border-radius: 10px;
+  height: 4px;
+  margin: 7px 0;
+  transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.navbar_ham_label span:nth-of-type(1) {
+  width: 50%;
+}
+
+.navbar_ham_label span:nth-of-type(2) {
+  width: 100%;
+}
+
+.navbar_ham_label span:nth-of-type(3) {
+  width: 75%;
+}
+
+.navbar_ham_label input[type="checkbox"] {
+  display: none;
+}
+
+
+/* Sidebar Styles */
+.navbar_sidebar {
+  position: fixed;
+  top: 0px;
+  right: -100%;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fffdfd;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+  transition: right 1s ease;
+  z-index: 999;
+}
+
+.navbar_sidebar {
+  right: 0;
+}
+
+.navbar_sidebar_links p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar_sidebar_links p:hover {
+  color: #007bff;
+}
+
+.navbar_sidebar_contact {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.navbar_sidebar_contact p {
+  margin: 0.5rem 0;
+}
+
+/* Hide main navbar links on mobile */
+@media (max-width: 768px) {
+  .navbar_links {
+      display: none;
+  }
+  .navbar_contact {
+      display: none;
+  }
+  .navbar_hamburger {
+      display: grid;
+  }
+}

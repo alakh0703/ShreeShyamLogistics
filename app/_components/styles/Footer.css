@@ -1,0 +1,86 @@
+/* General footer styling */
+.footer_container {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer_section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer_section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+}
+
+.footer_section p,
+.footer_section li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* List styling */
+.footer_services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer_services li {
+    margin-bottom: 8px;
+}
+
+/* Social media links */
+.footer_socials a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer_socials a:hover {
+    color: #ff6b6b;
+}
+
+/* Copyright section */
+.footer_copyright {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #888;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer_content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer_socials {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+}

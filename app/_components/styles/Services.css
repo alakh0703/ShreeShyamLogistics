@@ -1,0 +1,94 @@
+/* General Styling for Services Section */
+.services_container {
+    padding: 50px 20px;
+    background-color: #fff; /* Same background as navbar */
+    text-align: center; /* Center title and cards */
+    padding-top: 120px;
+}
+
+/* Title Styling */
+.services_title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase; /* Make the title bold and capitalized */
+    letter-spacing: 2px;
+}
+
+.services_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Individual Card Styling */
+.services_card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services_card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.services_image {
+    width: 80px; /* Image size */
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+/* Card Text */
+.services_card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.services_card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services_card {
+        padding: 15px;
+    }
+
+    .services_title {
+        font-size: 2.5rem; /* Adjust title size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .services_image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .services_card h2 {
+        font-size: 1rem;
+    }
+
+    .services_card p {
+        font-size: 0.8rem;
+    }
+
+    .services_title {
+        font-size: 2rem; /* Further adjust title size for mobile screens */
+    }
+}

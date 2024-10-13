@@ -1,0 +1,208 @@
+.contact_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.contact_form {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.contact_info {
+    flex: 1;
+    margin-left: 40px;
+}
+
+.contact_title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.contact_inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.contact_inputWrapper {
+    width: 48%;
+}
+
+.contact_inputWrapper label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.required {
+    color: red;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+.phone_input {
+    display: flex;
+    align-items: center;
+}
+
+.country_code {
+    background-color: #f0f0f0;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+input[name="phone"] {
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.contact_button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.contact_button:hover {
+    background-color: #0056b3;
+}
+
+.contact_info .contact_detail {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .contact_container {
+        flex-direction: column;
+    }
+
+    .contact_form {
+        padding-right: 0;
+    }
+
+    .contact_info {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .contact_row {
+        flex-direction: column;
+    }
+
+    .contact_inputWrapper {
+        width: 100%;
+    }
+}
+.contact_button {
+    width: 200px; /* Smaller width */
+    padding: 12px;
+    background: linear-gradient(135deg, #007bff, #00d4ff); /* Modern gradient */
+    color: white;
+    border: none;
+    border-radius: 30px; /* Fully rounded */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    align-self: center; /* Centering the button */
+}
+
+.contact_button:hover {
+    background: linear-gradient(135deg, #0056b3, #00a1cc); /* Darker hover gradient */
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+.contact_button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Focus ring for accessibility */
+}
+
+.map_container {
+    margin-top: 20px;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow to match modern design */
+}
+
+@media (max-width: 768px) {
+    .contact_container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact_title {
+        font-size: 6vw; /* Larger titles on smaller screens */
+    }
+
+    .contact_form,
+    .contact_info {
+        padding: 0;
+    }
+
+    .contact_row {
+        flex-direction: column; /* Stack fields vertically */
+    }
+
+    .contact_inputWrapper {
+        width: 100%;
+    }
+
+    .map_container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact_button {
+        width: 100%;
+        padding: 10px;
+        font-size: 4vw;
+    }
+
+    .contact_inputGroup input, 
+    .contact_inputGroup textarea {
+        font-size: 5vw; /* Larger input fonts for mobile */
+    }
+}

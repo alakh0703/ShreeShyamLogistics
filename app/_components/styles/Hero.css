@@ -1,0 +1,48 @@
+.hero_container {
+    background-image: url('../../_assets/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    filter: brightness(0.6); /* Slight dark filter */
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.5); /* Vignette effect */
+  }
+  
+  .hero_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  }
+  
+  .hero_content {
+    z-index: 1;
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .hero_title {
+    font-size: 1.8rem; /* Smaller than the mission line */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    letter-spacing: 0.1rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .hero_subtitle {
+    font-size: 2.5rem; /* Larger mission line */
+    font-family: 'Montserrat', sans-serif; /* Optional secondary font */
+    margin-top: 1rem;
+    font-weight: 700;
+    color: #e0e0e0;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+  }
