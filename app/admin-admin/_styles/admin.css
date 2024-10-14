@@ -1,0 +1,123 @@
+/* AdminPage.css */
+
+.logo-admin {
+    cursor: pointer;
+}
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 140px;
+}
+
+.admin-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.admin-content {
+    display: flex;
+    height: 500px;
+}
+
+/* Sidebar for message list */
+.sidebar {
+    width: 30%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-right: 2px solid #ddd;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.message-list {
+    list-style: none;
+    padding: 0;
+}
+
+.message-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.message-item:hover {
+    background-color: #ececec;
+}
+
+.message-item.active {
+    background-color: #e0e0e0;
+}
+
+.message-item strong {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+}
+
+.message-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Message details view */
+.message-details {
+    width: 70%;
+    padding: 20px;
+}
+
+.message-content h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.message-content p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.placeholder {
+    color: #888;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 50px;
+}
+.delete-button {
+    background-color: #fc5d5d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .admin-content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .message-details {
+        width: 100%;
+    }
+}
