@@ -32,15 +32,26 @@ const AdminPage = () => {
         try {
             const contactsCollection = collection(db, "contacts");
             const contactsSnapshot = await getDocs(contactsCollection);
-            const contactsList = contactsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            const contactsList = contactsSnapshot.docs.map(doc => {
+                const data = doc.data();
+                // Ensure the document has all the required fields, providing defaults if necessary
+                return {
+                    id: doc.id,
+                    name: data.name || 'Unknown Name',
+                    email: data.email || 'Unknown Email',
+                    message: data.message || 'No message',
 
-            console.log("Contacts:", contactsList); // or return contactsList;
+                };
+            });
+
+            console.log("Contacts:", contactsList);
             setMessages(contactsList);
             return contactsList;
         } catch (error) {
             console.error("Error fetching contacts:", error);
         }
     };
+
 
     useEffect(() => {
 
