@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function Home() {
 
   const go2Whatsapp = () => {
-    window.open("https://wa.me/16479377165", "_blank");
+    window.open("https://wa.me/14372560892", "_blank");
   }
   return (
     <div >
